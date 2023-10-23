@@ -21,7 +21,7 @@ AppDataSource.initialize()
     app.use("/uploads", express.static("uploads"));
 
     app.get("/", (reg: Request, res: Response) => {
-      res.send("hello world!");
+      res.send("hello world - from - BaxDigital Social Media");
     });
 
     app.listen(port, () => {
