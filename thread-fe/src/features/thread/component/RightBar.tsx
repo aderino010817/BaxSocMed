@@ -156,16 +156,16 @@ export function UserProfile(prop: any) {
 
         <Box display="flex" justifyContent={"space-between"} w={"100%"}>
           <Link to={`/profil/user/${props?.id}`}>
-            <Box display="flex" gap="10px">
+            <Box display="flex" gap="1" flexDirection={"column"}>
               {/* <Text>{props.id}</Text> */}
               <Text>{props?.full_name}</Text>
               <Text color={"#6f6f6f"} fontStyle={"italic"}>
                 @{props?.username}
               </Text>
-            </Box>
-            <Text>
+              <Text>
               {props?.profile_description ?? "Ini tu belom ada deskripsi..."}
             </Text>
+            </Box>
           </Link>
           <Box>
             <Button
