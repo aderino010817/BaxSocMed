@@ -17,7 +17,7 @@ AppDataSource.initialize()
     // const router = express.Router();
 
     app.use(express.json());
-    app.use("/api/v1", router);
+    app.use("/", router);
     app.use("/uploads", express.static("uploads"));
 
     app.get("/", (reg: Request, res: Response) => {

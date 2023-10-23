@@ -5,6 +5,7 @@ import { Thread } from "./entities/Thread";
 import { Replies } from "./entities/Replies";
 import { Likes } from "./entities/Likes";
 import { Followers } from "./entities/Follows";
+import { MyMigration1698032263405 } from "./migrations/1698032263405-MyMigration";
 
 export const AppDataSource = new DataSource({
   type: "postgres",
@@ -17,6 +18,7 @@ export const AppDataSource = new DataSource({
   logging: false,
   // entities: ["src/entities/*.ts"],
   entities: [User, Thread, Replies, Likes, Followers],
-  migrations: ["src/migrations/*.ts"],
+  // migrations: ["src/migrations/*.ts"],
+  migrations: [MyMigration1698032263405],
   subscribers: [],
 });

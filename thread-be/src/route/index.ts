@@ -12,7 +12,7 @@ import LikesController from "../controllers/LikesController";
 const router = express.Router();
 
 router.get("/", (reg: Request, res: Response) => {
-  res.send("hello world v1!");
+  res.send("hello world - Original Page of BaxSocMed_API!");
 });
 
 router.get("/thread", authenticate, ThreadsController.find);

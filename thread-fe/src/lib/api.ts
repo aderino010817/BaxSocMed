@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const API = axios.create({
   // baseURL: "http://localhost:5000/api/v1",
-  baseURL: "https://circle-back.vercel.app/api/v1",
+  baseURL: "https://baxsocialmedia-be.vercel.app/",
 });
 
 export function setAuthToken(token: string) {
