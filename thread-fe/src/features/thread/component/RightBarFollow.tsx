@@ -36,9 +36,15 @@ export function RightBarFollow() {
           alt="profil"
         />
         <Link to={`/profil`}>
-          <Text fontWeight={"bold"}>{user.full_name}</Text><br/>
-          <Text>@{user.username}</Text><br/>
-          <Text>{user.profile_description}</Text>
+          <Box display={'flex'} flexDirection={"column"} gap={{
+            base: '1',
+            md: '1',
+            lg: '2'
+          }}>
+            <Text fontWeight={"bold"}>{user.full_name}</Text>
+            <Text>@{user.username}</Text>
+            <Text>{user.profile_description}</Text>
+          </Box>
         </Link>
       </Box>
     </Box>
