@@ -1,4 +1,4 @@
-import { Box, Button, Container, Input, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Center, Container, Input, Stack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { useRegister } from "../features/auth/hooks/useRegister";
 
@@ -7,12 +7,16 @@ export default function Register() {
 
   return (
     <>
-      <Container alignContent="center" mt="20">
+      <Container alignContent="center" mt="10" mb={'10'}>
         <Stack spacing={3}>
-          <Text fontSize="40px" fontWeight="bold" color="#04a51e">
-            Circle
-          </Text>
-          <Text fontSize="20px">Create account Circle</Text>
+        <Center textAlign={'center'}>
+            <Text fontSize="40px" fontWeight="bold" color="#04a51e">
+              BAX
+              <br />
+              Socialize
+            </Text>
+          </Center>
+          <Text fontSize="20px">Create account <br/><b><em>BAX-Social</em></b></Text>
           <Input
             onChange={handleChange}
             name="full_name"

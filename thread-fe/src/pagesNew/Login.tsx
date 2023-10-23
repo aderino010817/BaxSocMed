@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Center,
   Container,
   Input,
   InputGroup,
@@ -21,12 +22,18 @@ export default function Login() {
 
   return (
     <>
-      <Container alignContent="center" mt="20">
+      <Container alignContent="center" mt="10" mb='10'>
         <Stack spacing={3}>
-          <Text fontSize="40px" fontWeight="bold" color="#04a51e">
-            Circle
+          <Center textAlign={'center'}>
+            <Text fontSize="40px" fontWeight="bold" color="#04a51e">
+              BAX
+              <br />
+              Socialize
+            </Text>
+          </Center>
+          <Text fontSize="20px">
+            Login to <br/><b><em>BAX-Social</em></b>
           </Text>
-          <Text fontSize="20px">Login to Circle</Text>
           <Input
             onChange={handleChange}
             name="email"
