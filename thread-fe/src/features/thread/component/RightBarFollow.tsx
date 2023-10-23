@@ -36,8 +36,8 @@ export function RightBarFollow() {
           alt="profil"
         />
         <Link to={`/profil`}>
-          <Text>{user.full_name}</Text>
-          <Text>@{user.username}</Text>
+          <Text fontWeight={"bold"}>{user.full_name}</Text><br/>
+          <Text>@{user.username}</Text><br/>
           <Text>{user.profile_description}</Text>
         </Link>
       </Box>
