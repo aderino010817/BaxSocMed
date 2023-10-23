@@ -15,7 +15,7 @@ export function SideBar() {
   return (
     <Box>
       <Box fontSize={20} p={7} display="flex" flexDirection="column" gap={3}>
-        <Text color="#04a51e" fontSize={45} fontWeight="bold">
+        <Text color="#04a51e" fontSize={30} fontWeight="bold">
           BAX<br/>Socialize
         </Text>
         <Link to={`/`}>
