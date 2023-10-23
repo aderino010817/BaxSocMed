@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Box, Button, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -60,8 +60,14 @@ export function RightBar() {
           alt="profil"
         />
         <Link to={`/profil`}>
-          <Text>{user.full_name}</Text>
-          <Text>@{user.username}</Text>
+          <Flex gap={{
+            base: '2',
+            md: '4',
+            lg: '6'
+          }}>
+            <Text fontWeight={650}>{user.full_name}</Text>
+            <Text color={'gray'} fontStyle={"italic"}>@{user.username}</Text>
+          </Flex>
           <Text>{user.profile_description}</Text>
         </Link>
       </Box>
@@ -158,13 +164,15 @@ export function UserProfile(prop: any) {
           <Link to={`/profil/user/${props?.id}`}>
             <Box display="flex" gap="1" flexDirection={"column"}>
               {/* <Text>{props.id}</Text> */}
-              <Text>{props?.full_name}</Text>
+              <Text fontWeight={"bold"} mb={"-2"}>
+                {props?.full_name}
+              </Text>
               <Text color={"#6f6f6f"} fontStyle={"italic"}>
                 @{props?.username}
               </Text>
               <Text>
-              {props?.profile_description ?? "Ini tu belom ada deskripsi..."}
-            </Text>
+                {props?.profile_description ?? "Ini tu belom ada deskripsi..."}
+              </Text>
             </Box>
           </Link>
           <Box>

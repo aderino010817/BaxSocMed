@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Box, Button, Image, Text } from "@chakra-ui/react";
 import moment from "moment";
 import { useEffect, useState } from "react";
@@ -98,12 +100,12 @@ const ThreadCardNew = (props: any) => {
             {/* <Box>{props.id}</Box> */}
             <Text color={"#6f6f6f"} fontStyle={"italic"}>
               @{props.author_username}
-            </Text>
+            </Text><br/>
             <Text>{moment(props.posted_at).startOf("minute").fromNow()}</Text>
           </Box>
           {/* <Text>{props.id}</Text> */}
           <Link to={`/detail-blog/${props.id}`}>{props.content}</Link>
-          <Text>{moment(props.posted_at).format("LLLL")}</Text>
+          <Text fontSize={'13px'} color={'gray'}>{moment(props.posted_at).format("LLLL")}</Text>
           <Image src={props.image as string} alt="" />
           <Button
             bg="none"
